@@ -110,7 +110,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>..\opencv\x64\vc16\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_world490.lib;opencv_world490d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_gapi490d.lib;opencv_highgui490d.lib;opencv_imgcodecs490d.lib;opencv_imgproc490d.lib;opencv_ml490d.lib;opencv_objdetect490d.lib;opencv_photo490d.lib;opencv_stitching490d.lib;opencv_ts490d.lib;opencv_video490d.lib;opencv_videoio490d.lib;opencv_world490.lib;opencv_world490d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -132,13 +132,14 @@
       <OptimizeReferences>
       </OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\opencv\x64\vc16\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_world490.lib;opencv_world490d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\opencv\x64\vc16\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_gapi490.lib;opencv_highgui490.lib;opencv_imgcodecs490.lib;opencv_imgproc490.lib;opencv_ml490.lib;opencv_objdetect490.lib;opencv_photo490.lib;opencv_stitching490.lib;opencv_ts490.lib;opencv_video490.lib;opencv_videoio490.lib;opencv_world490.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkTimeCodeGeneration />
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ML++.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mnist.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
